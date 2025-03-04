@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docum3</title>
+</head>
+<style>
+    .bar{
+        width: 90%;
+        height: 50px;
+        background-color: rgb(130, 166, 221);
+        border: 2px solid black;
+        border-radius: 30px;
+
+    }
+    .loding{
+       
+        height: 50px;
+        background-color: salmon;
+        border-radius: 30px;
+        animation: loding 3s ;
+        
+    }
+    @keyframes loding{
+        0%{
+            width: 0%;
+        }
+        90%{
+            width: 90%;
+        }
+        95%{width: 70%;}
+        100%{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="bar"> 
+            <div class="loding"></div>
+        </div>
+    </main>
+</body>
+</html>

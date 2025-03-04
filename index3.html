@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class</title>
+</head>
+<style>
+    .you{
+        background-color: skyblue;
+        border: 2px solid black;
+        height: 50px;
+        width: 100px;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        position: relative;
+    }
+    .you:hover{
+        background-color: salmon;
+        border-radius: 10px;
+        transform: rotate(60deg);
+    }
+    .you:active{
+        background-color: violet;
+    }
+</style>
+<body>
+    <button class=" you"> youtube</button>
+</body>
+</html>
