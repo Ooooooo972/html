@@ -1,5 +1,6 @@
 *{
     background-color: rgb(64, 61, 61);
+    background-image: url(pexels-photo-3052361.jpeg);
     padding:0;
     margin: 0;
 
@@ -21,11 +22,22 @@ nav{
 .box{
     height: 100px;
     transition:all 2s;
+    display: flex;
+    
     justify-content: center;
    position: relative;
    top: 90px;
+   transform-style: preserve-3d;
+   animation: rotate 5s linear infinite;
+   animation-delay: 3s;
     
     
+}
+@keyframes rotate{
+    0%{
+        transition: perspective(1000px) rotatey(0deg);
+    }
+    100%{transition: perspective(1000px) rotatey(360deg);}
 }
 img{
     height: 200px;
@@ -39,4 +51,20 @@ img{
 img:hover{
     width: 30%;
     height: 300px;
+    
+    animation: loding 5s linear infinite;
+    animation-delay: 3s;
+     
+}
+@keyframes loding {
+    0%{
+        width: 0%;
+    }
+    90%{
+        width: 90%;
+    }
+    95%{width: 70%;}
+    100%{
+        width: 100%;
+    }
 }
