@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalclock</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(118, 170, 170);
+    }
+    nav{
+        background-color: brown;
+         height: 30px;
+         width: 100%;
+         display: flex; 
+         justify-content: space-around;  
+             
+    }
+    a{
+        text-decoration: none;
+        background-color:brown;
+    }
+    .box{
+        height: 80px;
+        width: 200px;
+        border-radius: 30px;
+        background-color: rgb(88, 130, 23);
+        position: absolute;
+        top:300px;
+        left: 200px;
+        text-align: center;
+        box-shadow: 1cm 1cm 1cm brown;
+    }
+        
+</style>
+<script>
+    function Digitalclock (){
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let session = "AM";
+        if(hours == 0){
+            hours = 12;
+        }
+        if(hours > 12){
+            hours = hours - 12;
+            session = "PM";
+        }
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+        let time = hours + ":" + minutes + ":" + seconds + " " + session;
+        document.getElementById("dig").innerText = time;
+        document.getElementById("dig").textContent = time;
+        setTimeout(Digitalclock, 1000);
+        
+    }
+
+</script>
+<body onload="Digitalclock()">
+    <header>
+        <div> 
+            <nav>
+             <a href="#"> Home </a>
+             <a href="#"> about </a>
+             <a href="#"> more </a>
+             <a href="#"> help</a>
+                
+            
+        </nav>
+    </div>
+    </header>
+    <main>
+        <div class="box" id="dig">
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
